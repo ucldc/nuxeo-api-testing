@@ -1,2 +1,4 @@
 # nuxeo-api-testing
-Scripts for validating the output of Nuxeo API calls for retrieving metadata
+Scripts for validating the output of Nuxeo API calls for retrieving metadata.
+
+We have had issues with the Nuxeo API returning faulty results. Depending on the query, this could be an inconsistent number of records each time the query is run; or the same number of records but with duplicate results. Since Nuxeo support did not usefully respond to our ticket for several years, we wrote a script to query the database directly as a workaround. Nuxeo tech support has now finally responded to our ticket and suggests that adding an `ORDER BY` clause on a unique field such as uuid should fix the problem. The scripts in this repo compare the results of a Nuxeo API query vs the results of a direct database query using our in-house workaround script. We would love to be able to rely on the Nuxeo API rather than maintaining our workaround script if we can verify good results.
