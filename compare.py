@@ -63,7 +63,7 @@ def get_records(collection_id, version, query_method, children=False):
 
 def main(params):
     nuxeoapi_parent_data = get_records(params.collection_id, params.version, 'nuxeoapi')
-    dbquery_parent_data = get_records(params.collection_id, params.version, 'nuxeoapi')
+    dbquery_parent_data = get_records(params.collection_id, params.version, 'dbquery')
 
     print(f"nuxeoapi parent count: {len(nuxeoapi_parent_data)}")
     print(f"dbquery  parent count: {len(dbquery_parent_data)}")
@@ -71,7 +71,7 @@ def main(params):
     print(f"Parent data sets equal?: {nuxeoapi_parent_data == dbquery_parent_data}")
 
     nuxeoapi_child_data = get_records(params.collection_id, params.version, 'nuxeoapi', children=True)
-    dbquery_child_data = get_records(params.collection_id, params.version, 'nuxeoapi', children=True)
+    dbquery_child_data = get_records(params.collection_id, params.version, 'dbquery', children=True)
 
     print(f"nuxeoapi child count: {len(nuxeoapi_child_data)}")
     print(f"dbquery  child count: {len(dbquery_child_data)}")
