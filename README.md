@@ -15,7 +15,7 @@ However, [the @children web adapter](https://doc.nuxeo.com/nxdoc/rest-api-web-ad
 
 https://doc.nuxeo.com/nxdoc/nxql/ - specifically: paginated SELECT with `ecm:ancestorId = 'some-doc-id'` and `ecm:path STARTSWITH '/some/doc/path'`. Also `ecm:parentId = 'some-doc-id'`. Does adding `ORDER BY ecm:path, ecm:uuid` provide consistent results?
 
-https://doc.nuxeo.com/nxdoc/rest-api-web-adapters/ - specifically paginated queries using the `@children` adapter. There is no way for the user to change the order of results.
+https://doc.nuxeo.com/nxdoc/rest-api-web-adapters/ - specifically paginated queries using the `@children` adapter. There is no way for the user to request a specific ordering of results.
 
 ## CDL code that needs to query nuxeo for paginated metadata
 
