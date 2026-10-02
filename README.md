@@ -19,15 +19,15 @@ https://doc.nuxeo.com/nxdoc/rest-api-web-adapters/ - specifically paginated quer
 
 ## CDL code that needs to query nuxeo for paginated metadata
 
-# nuxeo_merritt
+### nuxeo_merritt
 
 Uses several paginated SELECT statements that are not ordered by ecm:uuid.
 
-# pynux
+### pynux
 
 This is a python library that we wrote to interface with the Nuxeo API, as Nuxeo did not have their own python library at the time (or at least, Brian could not get it to work). It allows the user to issue any query they like, including problematic ones; it makes use the of the @children web adapter endpoint; and it uses a couple of hard-coded recursive paginated SELECT statements that are not ordered by ecm:uuid.
 
-# nuxeo_spreadsheet
+### nuxeo_spreadsheet
 
 Uses Nuxeo API via pynux.
 
@@ -35,7 +35,7 @@ Exporter uses the following pynux utils functions: children(), get_metadata()
 
 Importer uses: get_uid(), update_nuxeo_properties()
 
-# nxcli
+### nxcli
 
 This is a utility written in node.js for interacting with the Nuxeo API. Unlike all of our other tooling around nuxeo, it is written in node and uses nuxeo's node library.
 
@@ -43,10 +43,10 @@ The `nx ls` utility uses the `@children` endpoint.
 
 The `nx q` utility allows the user to issue any query they like, including problematic ones.
 
-# rikolti nuxeo fetcher
+### rikolti nuxeo fetcher
 
 Currently uses the dbquery lambda, which was written as a workaround for the issues described above before we understood what was causing them.
 
-# nuxeo-extent-stats
+### nuxeo-extent-stats
 
 Currently uses the dbquery lambda, which was written as a workaround for the issues described above before we understood what was causing them.
